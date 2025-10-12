@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HeadProvider } from "react-head"; 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -21,6 +22,7 @@ import GovtSchemes from "./pages/GovtSchemes";
 
 function App() {
   return (
+    <HeadProvider> 
     <Router>
       <Navbar />
       <Routes>
@@ -44,6 +46,7 @@ function App() {
       <Footer />
       <FloatingBot />
     </Router>
+    </HeadProvider>
   );
 }
 
