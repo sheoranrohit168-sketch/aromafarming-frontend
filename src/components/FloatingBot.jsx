@@ -33,7 +33,7 @@ export default function FloatingBot() {
       <div onClick={() => setOpen(!open)} className="cursor-pointer">
         <img
           src="/bot.gif"
-          alt="Buffalo Bot"
+          alt="Bot"
           className="w-20 h-20 object-contain rounded-full shadow-md border-2 border-green-600"
         />
       </div>

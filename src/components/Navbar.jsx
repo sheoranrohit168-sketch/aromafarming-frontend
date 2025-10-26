@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="bg-green-700 text-white flex justify-between items-center h-24" >
       <div className="h-full">
         <img 
-          src="/buffalo-bot.gif" 
+          src="/img/logo.png" 
           className="h-full w-full object-contain transform -scale-x-100" 
           alt="Logo" 
         />
