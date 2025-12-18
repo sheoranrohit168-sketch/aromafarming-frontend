@@ -1,6 +1,5 @@
 import React from "react";
-import { Title, Meta } from "react-head";
-
+import { Helmet } from "react-helmet-async";
 const Home = () => {
   return (
     <div className="font-poppins text-gray-800">

@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="h-full">
         <img 
           src="/img/logo.png" 
-          className="h-full w-full object-contain transform -scale-x-100" 
+          className="h-full w-full object-contain-scale-x-100" 
           alt="Logo" 
         />
       </div>
