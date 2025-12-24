@@ -2,21 +2,27 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="bg-green-700 text-white flex justify-between items-center h-24" >
-      <div className="h-full">
-        <img 
-          src="/img/logo.png" 
-          className="h-full w-full object-contain-scale-x-100" 
-          alt="Logo" 
+    <>
+      {/* 🔼 Logo (scrolls away) */}
+      <div className="flex justify-center py-4 bg-white">
+        <img
+          src="/img/logo.png"
+          alt="Aroma Farming Logo"
+          className="h-20 object-contain"
         />
       </div>
-      <ul className="flex gap-6 text-lg font-medium pr-6">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/aroma-agro">Aroma Agro</Link></li>
-        <li><Link to="/aroma-ecard">Aroma E-Card</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/about">About</Link></li>
-      </ul>
-    </nav>
+
+      {/* 📌 Sticky Navbar */}
+      <nav className="bg-green-700 text-white h-16 flex items-center justify-center 
+                      sticky top-0 z-[999] shadow-md">
+        <ul className="flex gap-8 text-lg font-medium">
+          <li><Link to="/" className="hover:text-yellow-300">Home</Link></li>
+          <li><Link to="/register-seller" className="hover:text-yellow-300">Aroma Agro</Link></li>
+          <li><Link to="/govt-schemes" className="hover:text-yellow-300">Government Schemes</Link></li>
+          <li><Link to="/contact" className="hover:text-yellow-300">Contact Us</Link></li>
+          <li><Link to="/about" className="hover:text-yellow-300">About</Link></li>
+        </ul>
+      </nav>
+    </>
   );
 }

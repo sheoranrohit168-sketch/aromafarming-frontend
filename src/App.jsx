@@ -2,25 +2,28 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 import Navbar from "./components/Navbar";
+import NotificationBar from "./components/NotificationBar";
 import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import AromaAgro from "./pages/AromaAgro";
-import AromaECard from "./pages/AromaECard";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import RegisterSeller from "./pages/RegisterSeller";
-import FloatingBot from "./components/FloatingBot";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import CropLoan from "./pages/CropLoan";
 import EquipmentFinancing from "./pages/EquipmentFinancing";
 import Consultancy from "./pages/Consultancy";
 import GovtSchemes from "./pages/GovtSchemes";
 
+import FloatingBot from "./components/FloatingBot";
+
 function App() {
   return (
     <>
+      {/* 🌐 Global SEO */}
       <Helmet>
         <title>Aroma Farming</title>
         <meta
@@ -30,12 +33,16 @@ function App() {
       </Helmet>
 
       <Router>
+        {/* 🔼 Logo + Sticky Navbar */}
         <Navbar />
 
+        {/* 🔔 Horizontal Running Notification Bar */}
+        <NotificationBar />
+
+        {/* 📄 Main Pages */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aroma-agro" element={<AromaAgro />} />
-          <Route path="/aroma-ecard" element={<AromaECard />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/signin" element={<Signin />} />
@@ -48,6 +55,7 @@ function App() {
           <Route path="/govt-schemes" element={<GovtSchemes />} />
         </Routes>
 
+        {/* 🔚 Footer & Floating Assistant */}
         <Footer />
         <FloatingBot />
       </Router>

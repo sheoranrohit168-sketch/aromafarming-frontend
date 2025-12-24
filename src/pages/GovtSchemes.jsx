@@ -1,104 +1,148 @@
-import React from "react";
-
 export default function GovtSchemes() {
   return (
-    <div className="font-poppins text-gray-800">
-      {/* Header */}
-      <header className="bg-blue-600 text-white py-12 text-center">
-        <h1 className="text-4xl font-bold">Government Schemes</h1>
-        <p className="mt-2 text-lg">
-          Exclusive schemes and benefits available for Aroma E-Card holders.
-        </p>
-      </header>
+    <div className="min-h-screen bg-gray-50 px-6 py-12">
+      
+     
 
-      {/* Intro */}
-      <section className="container mx-auto px-6 py-12">
-        <h2 className="text-2xl font-semibold mb-4">
-          Why Check Government Schemes?
-        </h2>
-        <p className="mb-6">
-          Farmers can benefit from multiple government initiatives such as crop
-          insurance, subsidies, low-interest loans, and modern farming support.
-          Aroma E-Card holders get priority assistance in accessing and applying
-          for these schemes.
-        </p>
-      </section>
+      {/* Heading */}
+      <h1 className="text-4xl font-bold text-green-700 text-center mb-4">
+        Government Schemes for Farmers 🌾
+      </h1>
 
-      {/* Schemes List */}
-      <section className="bg-gray-50 py-12">
-        <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-semibold mb-6 text-center">
-            Popular Government Schemes
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">
-                Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)
-              </h3>
-              <p>
-                Direct financial support of ₹6,000 annually to small and
-                marginal farmers. Aroma E-Card users get faster application
-                support.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">
-                PM Fasal Bima Yojana (PMFBY)
-              </h3>
-              <p>
-                Crop insurance against natural calamities, pests, and diseases.
-                Aroma E-Card holders get guided claim assistance.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">
-                Kisan Credit Card (KCC)
-              </h3>
-              <p>
-                Easy credit access at lower interest rates for buying seeds,
-                fertilizers, and other inputs. Extra benefits with Aroma
-                membership.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">
-                Soil Health Card Scheme
-              </h3>
-              <p>
-                Free soil testing to guide farmers on fertilizer use. Aroma
-                E-Card holders can book priority testing slots.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+        Explore major central and state government schemes available for farmers.
+        Aroma Farming helps you stay informed and access benefits easily.
+      </p>
 
-      {/* Benefits for E-Card Holders */}
-      <section className="container mx-auto px-6 py-12">
-        <h2 className="text-2xl font-semibold mb-4">
-          Extra Benefits with Aroma E-Card
-        </h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Dedicated support team for scheme applications</li>
-          <li>Fast-tracked access to government subsidies</li>
-          <li>Free documentation assistance for loans & insurance</li>
-          <li>Exclusive 5% discount on Aroma products (for ₹1 lakh+ buyers)</li>
-        </ul>
-      </section>
-
-      {/* Apply Button */}
-      <section className="bg-blue-100 py-12">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Apply for a Scheme</h2>
-          <p className="mb-6">
-            If you are an Aroma E-Card holder, you can apply for government
-            schemes with our expert guidance.
+      {/* Schemes Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        {/* PM-KISAN */}
+        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold text-green-700 mb-2">
+            PM-KISAN Samman Nidhi
+          </h3>
+          <p className="text-gray-600 mb-4">
+            Income support of ₹6,000 per year to eligible farmer families.
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700">
-            Apply Now
-          </button>
+          <a
+            href="https://pmkisan.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 font-medium hover:underline"
+          >
+            Apply / Know More →
+          </a>
         </div>
-      </section>
+
+        {/* KCC */}
+        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold text-green-700 mb-2">
+            Kisan Credit Card (KCC)
+          </h3>
+          <p className="text-gray-600 mb-4">
+            Short-term credit support for crop cultivation and allied activities.
+          </p>
+          <a
+            href="https://www.myscheme.gov.in/schemes/kcc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 font-medium hover:underline"
+          >
+            Apply / Know More →
+          </a>
+        </div>
+
+        {/* PMFBY */}
+        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold text-green-700 mb-2">
+            PM Fasal Bima Yojana
+          </h3>
+          <p className="text-gray-600 mb-4">
+            Crop insurance against natural calamities and yield loss.
+          </p>
+          <a
+            href="https://pmfby.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 font-medium hover:underline"
+          >
+            Apply / Know More →
+          </a>
+        </div>
+
+        {/* Soil Health Card */}
+        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold text-green-700 mb-2">
+            Soil Health Card Scheme
+          </h3>
+          <p className="text-gray-600 mb-4">
+            Provides soil nutrient status to help farmers improve productivity.
+          </p>
+          <a
+            href="https://soilhealth.dac.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 font-medium hover:underline"
+          >
+            Apply / Know More →
+          </a>
+        </div>
+
+        {/* PMKSY */}
+        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold text-green-700 mb-2">
+            Pradhan Mantri Krishi Sinchai Yojana
+          </h3>
+          <p className="text-gray-600 mb-4">
+            Ensures irrigation access and water-use efficiency.
+          </p>
+          <a
+            href="https://pmksy.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 font-medium hover:underline"
+          >
+            Apply / Know More →
+          </a>
+        </div>
+
+        {/* eNAM */}
+        <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold text-green-700 mb-2">
+            e-NAM (National Agriculture Market)
+          </h3>
+          <p className="text-gray-600 mb-4">
+            Online trading platform for better price discovery.
+          </p>
+          <a
+            href="https://www.enam.gov.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 font-medium hover:underline"
+          >
+            Apply / Know More →
+          </a>
+        </div>
+
+      </div>
+
+      {/* Help Section */}
+      <div className="mt-16 text-center">
+        <h3 className="text-2xl font-bold text-gray-800 mb-3">
+          Need Help Applying?
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Aroma Farming can guide you through eligibility and application
+          processes.
+        </p>
+        <a
+          href="/contact"
+          className="bg-green-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-green-700 transition"
+        >
+          Contact Aroma Farming
+        </a>
+      </div>
     </div>
   );
 }

@@ -1,169 +1,251 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import Counter from "../components/Counter";
+
 const Home = () => {
   return (
     <div className="font-poppins text-gray-800">
-      {/* Header */}
-      <header className="shadow-md sticky top-0 bg-white z-50">
-        <div className="container mx-auto flex justify-between items-center px-4 py-3">
-          <div className="flex items-center space-x-3">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="border rounded-md px-2 py-1 text-sm"
-            />
-            <button className="md:hidden text-2xl">☰</button>
-          </div>
-        </div>
-      </header>
+      <Helmet>
+        <title>Armo Agro | Inovation at every acre</title>
+        <meta
+          name="description"
+          content="Armo Agro supports farmers with crop loans, equipment financing, consultancy and access to government schemes."
+        />
+      </Helmet>
 
-      {/* Intro Section */}
-      <section className="container mx-auto grid md:grid-cols-2 gap-6 px-4 py-12">
-        <div className="bg-green-50 p-6 rounded-lg shadow">
-          <p className="mb-4">
-            Aroma Farming is a farmer-first platform offering crop loans,
-            equipment financing, consultancy and risk management solutions. We
-            combine easy finance, practical training and real-time market
-            insights so small and marginal farmers can flourish.
+      {/* HERO + STATS (gap reduced) */}
+      <section className="container mx-auto grid md:grid-cols-2 gap-6 px-6 py-14">
+        {/* LEFT */}
+        <div className="bg-emerald-50 p-8 rounded-2xl fade-up">
+          <h1 className="text-3xl md:text-4xl  text-emerald-700 mb-4 leading-snug">
+            Inovation at every acre
+            <br />
+          </h1>
+
+          <p className="text-gray-700 mb-4 leading-relaxed">
+            <strong>Armo Agro</strong> helps farmers deal with finance,
+            planning and schemes — without confusion or pressure.
           </p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Fast loan approvals with guidance</li>
-            <li>Expert agronomy & market advisory</li>
-            <li>Insurance & risk mitigation</li>
-          </ul>
-          <a
-            href="/about"
-            className="inline-block mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
-          >
-            Learn More
-          </a>
+
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            We guide you through decisions that affect your crop,
+            your income and your future.
+          </p>
+
+          <div className="flex gap-3 flex-wrap">
+            <a
+              href="/about"
+              className="bg-emerald-600 text-white px-5 py-3 rounded-lg hover:bg-emerald-700 transition"
+            >
+              Know More
+            </a>
+            <a
+              href="/consultancy"
+              className="border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg hover:bg-emerald-100 transition"
+            >
+              Talk to an Expert
+            </a>
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 bg-white p-6 rounded-lg shadow text-center">
-          <div>
-            <strong className="text-xl">---</strong>
-            <p className="text-sm">Farmers helped</p>
+
+        {/* RIGHT – STATS */}
+        <div className="grid grid-cols-2 gap-4 bg-white p-8 rounded-2xl fade-up fade-delay-1 text-center">
+          <div className="hover-lift p-4 rounded-xl bg-emerald-50">
+            <p className="text-3xl font-bold text-emerald-700">
+              <Counter end={2} />
+            </p>
+            <p className="text-sm mt-1 text-gray-600">
+              Farmers Guided
+            </p>
           </div>
-          <div>
-            <strong className="text-xl">---</strong>
-            <p className="text-sm">Loans disbursed</p>
+
+          <div className="hover-lift p-4 rounded-xl bg-emerald-50">
+            <p className="text-3xl font-bold text-emerald-700">
+              ₹<Counter end={1} /> L
+            </p>
+            <p className="text-sm mt-1 text-gray-600">
+              Finance Facilitated
+            </p>
           </div>
-          <div>
-            <strong className="text-xl">---</strong>
-            <p className="text-sm">Customer satisfaction</p>
+
+          <div className="col-span-2 hover-lift p-4 rounded-xl bg-emerald-50">
+            <p className="text-3xl font-bold text-emerald-700">
+              <Counter end={95} />%
+            </p>
+            <p className="text-sm mt-1 text-gray-600">
+              Farmers Felt More Confident
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="bg-gray-50 py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-center text-2xl font-semibold mb-8">
-            Our Key Services
+      {/* HOW IT WORKS */}
+      <section className="bg-gray-50 py-14">
+        <div className="container mx-auto px-6">
+          <h2 className="text-2xl font-semibold text-center mb-10 fade-up">
+            How Farmers Use Armo Agro
           </h2>
+
+          <div className="grid md:grid-cols-4 gap-5 text-center">
+            {[
+              ["Share Your Need", "Loan, machinery, advice or schemes"],
+              ["Get Clear Guidance", "Simple explanations, no jargon"],
+              ["Apply Confidently", "Only what fits your situation"],
+              ["Ongoing Support", "We stay connected after approval"],
+            ].map(([title, desc], i) => (
+              <div
+                key={i}
+                className="bg-white p-6 rounded-xl hover-lift fade-up fade-delay-2"
+              >
+                <p className="font-semibold mb-2">{title}</p>
+                <p className="text-sm text-gray-600">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-2xl font-semibold text-center mb-10 fade-up">
+            Services Built Around Real Farming
+          </h2>
+
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white shadow rounded-lg p-4 text-center">
-              <img src="/img/loan.png" alt="Crop Loans" className="h-20 mx-auto mb-4" />
-              <h3 className="font-bold">Crop Loans</h3>
-              <p className="text-sm my-2">
-                Flexible small-ticket and seasonal loans tailored to crop cycles.
-              </p>
-              <a href="/crop-loan" className="hover:text-green-600 font-medium">
-                Apply now →
-              </a>
-            </div>
-            <div className="bg-white shadow rounded-lg p-4 text-center">
-              <img src="/img/equ.png" alt="Equipment Financing" className="h-20 mx-auto mb-4" />
-              <h3 className="font-bold">Equipment Financing</h3>
-              <p className="text-sm my-2">
-                Finance tractors, harvesters and farm equipment with easy EMIs.
-              </p>
-              <a href="/equipment-financing" className="text-green-600 font-medium">
-                View options →
-              </a>
-            </div>
-            <div className="bg-white shadow rounded-lg p-4 text-center">
-              <img src="/img/consult.png" alt="Consultancy" className="h-20 mx-auto mb-4" />
-              <h3 className="font-bold">Consultancy & Planning</h3>
-              <p className="text-sm my-2">
-                Soil testing, crop planning and market linkages from experts.
-              </p>
-              <a href="/consultancy" className="text-green-600 font-medium">
-                Book consultation →
-              </a>
-            </div>
+            {[
+              {
+                img: "/img/loan.png",
+                title: "Crop Loans",
+                text: "Loans aligned with sowing and harvesting cycles.",
+                link: "/crop-loan",
+              },
+              {
+                img: "/img/equ.png",
+                title: "Equipment Financing",
+                text: "Tractors and tools with manageable EMIs.",
+                link: "/equipment-financing",
+              },
+              {
+                img: "/img/consult.png",
+                title: "Consultancy & Planning",
+                text: "Crop planning, soil insights and market awareness.",
+                link: "/consultancy",
+              },
+            ].map((s, i) => (
+              <div
+                key={i}
+                className="bg-white p-8 rounded-xl text-center hover-lift fade-up"
+              >
+                <img src={s.img} className="h-20 mx-auto mb-4" />
+                <h3 className="font-bold text-lg">{s.title}</h3>
+                <p className="text-sm text-gray-600 mt-3">{s.text}</p>
+                <a
+                  href={s.link}
+                  className="text-emerald-600 font-medium mt-4 block"
+                >
+                  Learn more →
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+      {/* DOWNLOAD ARMO AGRO APP – INPUT PURCHASE */}
+<section className="relative overflow-hidden bg-gradient-to-br from-emerald-700 to-emerald-900 py-20">
 
-      {/* Market Snapshot */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-xl font-semibold mb-4">Live Market Snapshot</h2>
-        <div id="liveDataList" className="grid md:grid-cols-3 gap-4">
-          <div className="bg-white p-4 rounded shadow text-center">
-            Loading market data...
-          </div>
-        </div>
-      </section>
+  {/* soft background shapes */}
+  <div className="absolute -top-20 -left-20 w-72 h-72 bg-emerald-600/30 rounded-full blur-3xl"></div>
+  <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-green-500/20 rounded-full blur-3xl"></div>
 
-      {/* Testimonials */}
-      <section className="bg-gray-50 py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-xl font-semibold mb-6">Success Stories</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white shadow p-4 rounded-lg">
-              <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
-                alt="Ravi"
-                className="h-32 w-32 rounded-full mx-auto"
-              />
-              <blockquote className="italic text-center mt-4">
-                “With Kisan Sathi's loan and guidance I diversified into
-                vegetables. My income increased 3x in two seasons.” <br />
-                <cite className="text-sm">— Ravi, Haryana</cite>
-              </blockquote>
-            </div>
-            <div className="bg-white shadow p-4 rounded-lg">
-              <img
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1"
-                alt="Meera"
-                className="h-32 w-32 rounded-full mx-auto"
-              />
-              <blockquote className="italic text-center mt-4">
-                “Consultation on seed selection and timely market advice helped
-                me avoid losses.” <br />
-                <cite className="text-sm">— Meera, Punjab</cite>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="relative container mx-auto px-6 max-w-6xl grid md:grid-cols-2 gap-12 items-center">
 
-      {/* Videos */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-xl font-semibold mb-6">Learn with Videos</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <iframe
-              className="w-full h-56 rounded-lg"
-              src="https://www.youtube.com/embed/HX3G3w1s1_0"
-              title="Modern Farming Techniques"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
-            <h4 className="mt-2 font-medium">Modern Farming Techniques</h4>
+    {/* LEFT CONTENT */}
+    <div className="text-white animate-fade-up">
+      <h2 className="text-4xl font-bold mb-5 leading-snug">
+        Buy Seeds & Agrochemicals  
+        <br />
+        with the Armo Agro App 
+      </h2>
+
+      <p className="text-emerald-100 mb-6 leading-relaxed max-w-lg">
+        The Armo Agro app helps farmers purchase
+        <strong> certified seeds </strong> and
+        <strong> genuine agrochemicals </strong>
+        directly from trusted sellers — without confusion or middlemen.
+      </p>
+
+      <ul className="space-y-3 text-emerald-100 text-sm mb-8">
+        <li className="animate-fade-up animate-delay-1">
+          ✔ Verified seeds & crop protection products
+        </li>
+        <li className="animate-fade-up animate-delay-2">
+          ✔ Clear usage instructions & dosage guidance
+        </li>
+        <li className="animate-fade-up animate-delay-3">
+          ✔ Transparent pricing from trusted sellers
+        </li>
+        <li className="animate-fade-up animate-delay-3">
+          ✔ Designed for simple phones & rural networks
+        </li>
+      </ul>
+
+      <a
+        href="https://play.google.com/store/apps/details?id=armoagro.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-white text-emerald-700 px-8 py-4 rounded-xl font-semibold hover:bg-emerald-50 transition shadow-lg"
+      >
+        Download Armo Agro App →
+      </a>
+
+      <p className="text-xs text-emerald-200 mt-4">
+        *Currently not available. More features coming soon.
+      </p>
+    </div>
+
+    {/* RIGHT INFO CARD */}
+    <div className="animate-fade-up animate-delay-1">
+      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 text-white shadow-xl">
+        <h3 className="text-xl font-semibold mb-5">
+          Why farmers use the Armo Agro app
+        </h3>
+
+        <div className="grid grid-cols-2 gap-4 text-sm">
+          <div className="bg-white/10 p-4 rounded-xl">
+            🧪 <strong>Genuine Products</strong>
+            <p className="text-emerald-100 mt-1">
+              Avoid fake or expired chemicals
+            </p>
           </div>
-          <div>
-            <iframe
-              className="w-full h-56 rounded-lg"
-              src="https://www.youtube.com/embed/6Xc5C1W2c0A"
-              title="How to Apply for Crop Loans"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
-            <h4 className="mt-2 font-medium">How to Apply for Crop Loans</h4>
+
+          <div className="bg-white/10 p-4 rounded-xl">
+            🌾 <strong>Right Seed Choice</strong>
+            <p className="text-emerald-100 mt-1">
+              Select seeds suited to your crop & season
+            </p>
+          </div>
+
+          <div className="bg-white/10 p-4 rounded-xl">
+            📦 <strong>Doorstep Access</strong>
+            <p className="text-emerald-100 mt-1">
+              Order from anywhere, anytime
+            </p>
+          </div>
+
+          <div className="bg-white/10 p-4 rounded-xl">
+            🤝 <strong>Farmer-Friendly</strong>
+            <p className="text-emerald-100 mt-1">
+              Simple app, clear language
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+  </div>
+</section>
+
     </div>
   );
 };

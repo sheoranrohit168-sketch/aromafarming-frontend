@@ -14,7 +14,7 @@ const About = () => {
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-2xl font-bold mb-6">Who We Are</h2>
         <p className="mb-4">
-          Kisan Sathi is built with one mission: to empower farmers with financial
+          Aroma Agro is built with one mission: to empower farmers with financial
           support, modern techniques, and direct access to markets. 
         </p>
         <p className="mb-4">

@@ -3,8 +3,8 @@ export default function Footer() {
           <footer className="bg-green-700 text-white mt-12">
         <div className="container mx-auto grid md:grid-cols-4 gap-6 px-4 py-8">
           <div>
-            <h4 className="font-bold">Aroma Farming</h4>
-            <p>Empowering farmers with finance, guidance & market intelligence.</p>
+            <h4 className="font-bold">Aroma Agro</h4>
+            <p>Inovation at evry acre.</p>
           </div>
           <div>
             <h4 className="font-bold">Quick Links</h4>
@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold">Contact</h4>
             <p>Phone: +91 7496833173</p>
-            <p>Email: aromafarming@gmail.com</p>
+            <p>Email: help/aroma-agro@gmail.com</p>
           </div>
           <div>
             <h4 className="font-bold">Newsletter</h4>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center bg-green-800 py-2">
-          © 2025 Aroma Farming — All rights reserved.
+          © 2025 Aroma Agro — All rights reserved.
         </div>
       </footer>
   );
