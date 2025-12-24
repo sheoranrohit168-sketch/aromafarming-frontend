@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HeadProvider } from "react-head"; 
+import { Helmet } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -22,6 +22,11 @@ import GovtSchemes from "./pages/GovtSchemes";
 
 function App() {
   return (
+    <>
+      <Helmet>
+        <title>Aroma Farming</title>
+        <meta name="description" content="Aroma Agro Platform for Farmers" />
+      </Helmet>
     <HeadProvider> 
     <Router>
       <Navbar />
@@ -47,6 +52,7 @@ function App() {
       <FloatingBot />
     </Router>
     </HeadProvider>
+    </>
   );
 }
 
