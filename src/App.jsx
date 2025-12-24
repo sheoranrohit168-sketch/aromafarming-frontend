@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -17,41 +18,39 @@ import EquipmentFinancing from "./pages/EquipmentFinancing";
 import Consultancy from "./pages/Consultancy";
 import GovtSchemes from "./pages/GovtSchemes";
 
-
-
-
 function App() {
   return (
     <>
       <Helmet>
         <title>Aroma Farming</title>
-        <meta name="description" content="Aroma Agro Platform for Farmers" />
+        <meta
+          name="description"
+          content="Aroma Agro Platform for Farmers"
+        />
       </Helmet>
-    <HeadProvider> 
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aroma-agro" element={<AromaAgro />} />
-        <Route path="/aroma-ecard" element={<AromaECard />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/register-seller" element={<RegisterSeller />} />
-        <Route path="/terms" element={<TermsAndConditions />} />
-        <Route path="/crop-loan" element={<CropLoan />} />
-        <Route path="/equipment-financing" element={<EquipmentFinancing />} />
-        <Route path="/consultancy" element={<Consultancy />} />
-        <Route path="/govt-schemes" element={<GovtSchemes />} />
 
+      <Router>
+        <Navbar />
 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aroma-agro" element={<AromaAgro />} />
+          <Route path="/aroma-ecard" element={<AromaECard />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/register-seller" element={<RegisterSeller />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/crop-loan" element={<CropLoan />} />
+          <Route path="/equipment-financing" element={<EquipmentFinancing />} />
+          <Route path="/consultancy" element={<Consultancy />} />
+          <Route path="/govt-schemes" element={<GovtSchemes />} />
+        </Routes>
 
-      </Routes>
-      <Footer />
-      <FloatingBot />
-    </Router>
-    </HeadProvider>
+        <Footer />
+        <FloatingBot />
+      </Router>
     </>
   );
 }
