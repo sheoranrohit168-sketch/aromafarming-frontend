@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Counter from "../components/Counter";
@@ -33,18 +34,18 @@ const Home = () => {
           </p>
 
           <div className="flex gap-3 flex-wrap">
-            <a
-              href="/about"
+            <link
+              to="/about"
               className="bg-emerald-600 text-white px-5 py-3 rounded-lg hover:bg-emerald-700 transition"
             >
               Know More
-            </a>
-            <a
-              href="/consultancy"
+            </link>
+            <link
+              to="/consultancy"
               className="border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg hover:bg-emerald-100 transition"
             >
               Talk to an Expert
-            </a>
+            </link>
           </div>
         </div>
 
@@ -109,7 +110,7 @@ const Home = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-2xl font-semibold text-center mb-10 fade-up">
-            Services Built Around Real Farming
+            Services
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -140,12 +141,12 @@ const Home = () => {
                 <img src={s.img} className="h-20 mx-auto mb-4" />
                 <h3 className="font-bold text-lg">{s.title}</h3>
                 <p className="text-sm text-gray-600 mt-3">{s.text}</p>
-                <a
-                  href={s.link}
+                <link
+                  to={s.link}
                   className="text-emerald-600 font-medium mt-4 block"
                 >
-                  Learn more →
-                </a>
+                  Know more →
+                </link>
               </div>
             ))}
           </div>
