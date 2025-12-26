@@ -34,18 +34,18 @@ const Home = () => {
           </p>
 
           <div className="flex gap-3 flex-wrap">
-            <link
+            <Link
               to="/about"
               className="bg-emerald-600 text-white px-5 py-3 rounded-lg hover:bg-emerald-700 transition"
             >
               Know More
-            </link>
-            <link
+            </Link>
+            <Link
               to="/consultancy"
               className="border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg hover:bg-emerald-100 transition"
             >
               Talk to an Expert
-            </link>
+            </Link>
           </div>
         </div>
 
@@ -141,12 +141,12 @@ const Home = () => {
                 <img src={s.img} className="h-20 mx-auto mb-4" />
                 <h3 className="font-bold text-lg">{s.title}</h3>
                 <p className="text-sm text-gray-600 mt-3">{s.text}</p>
-                <link
+                <Link
                   to={s.link}
                   className="text-emerald-600 font-medium mt-4 block"
                 >
                   Know more →
-                </link>
+                </Link>
               </div>
             ))}
           </div>
