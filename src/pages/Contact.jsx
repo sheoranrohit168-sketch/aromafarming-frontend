@@ -31,7 +31,7 @@ const Contact = () => {
           <div className="bg-green-50 p-6 rounded-lg shadow">
             <h3 className="font-semibold mb-2">Our Office</h3>
             <p>Hisar, Haryana, India</p>
-            <p>Email: support@kisansathi.com</p>
+            <p>Email: aromaagro@gmail.com</p>
             <p>Phone: +91 98765 43210</p>
           </div>
         </div>

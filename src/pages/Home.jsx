@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="font-poppins text-gray-800">
       <Helmet>
-        <title>Armo Agro | Inovation at every acre</title>
+        <title>Aroma Agro | Innovation at every acre</title>
         <meta
           name="description"
           content="Armo Agro supports farmers with crop loans, equipment financing, consultancy and access to government schemes."
@@ -23,7 +23,7 @@ const Home = () => {
           </h1>
 
           <p className="text-gray-700 mb-4 leading-relaxed">
-            <strong>Armo Agro</strong> helps farmers deal with finance,
+            <strong>Aroma Agro</strong> helps farmers deal with finance,
             planning and schemes — without confusion or pressure.
           </p>
 
@@ -165,11 +165,11 @@ const Home = () => {
       <h2 className="text-4xl font-bold mb-5 leading-snug">
         Buy Seeds & Agrochemicals  
         <br />
-        with the Armo Agro App 
+        with the Aroma Agro App 
       </h2>
 
       <p className="text-emerald-100 mb-6 leading-relaxed max-w-lg">
-        The Armo Agro app helps farmers purchase
+        The Aroma Agro app helps farmers purchase
         <strong> certified seeds </strong> and
         <strong> genuine agrochemicals </strong>
         directly from trusted sellers — without confusion or middlemen.
@@ -196,7 +196,7 @@ const Home = () => {
         rel="noopener noreferrer"
         className="inline-block bg-white text-emerald-700 px-8 py-4 rounded-xl font-semibold hover:bg-emerald-50 transition shadow-lg"
       >
-        Download Armo Agro App →
+        Download Aroma Agro App →
       </a>
 
       <p className="text-xs text-emerald-200 mt-4">
@@ -208,7 +208,7 @@ const Home = () => {
     <div className="animate-fade-up animate-delay-1">
       <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 text-white shadow-xl">
         <h3 className="text-xl font-semibold mb-5">
-          Why farmers use the Armo Agro app
+          Why farmers use the Aroma Agro app
         </h3>
 
         <div className="grid grid-cols-2 gap-4 text-sm">
