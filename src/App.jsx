@@ -28,7 +28,7 @@ function App() {
         <title>Aroma Farming</title>
         <meta
           name="description"
-          content="Aroma Agro Platform for Farmers"
+          content="Aroma Agro Innovation at every acre"
         />
       </Helmet>
 
