@@ -5,16 +5,17 @@ export default function Navbar() {
     <>
       {/* 🔼 Logo (scrolls away) */}
       <div className="flex justify-center py-6 bg-[#FAF9F6]">
-        <div className="relative">
+        <div className="relative inline-block">
           <img
-            src="/img/logo.png"
+            src="/img/logo3.png"
             alt="Aroma Agro Logo"
             className="w-[720px] max-h-36 object-cover"
           />
           <img
             src="/img/butterfly.gif"
             alt="Butterfly"
-            className="w-15 absolute top-2 left-12 butterfly-animate pointer-events-none"
+            className="absolute w-18"
+            style={{ top: "4%", left: "42%" }}
           />
         </div>
       </div>
